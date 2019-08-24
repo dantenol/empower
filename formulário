@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Formulario</title>
+    </head>
+    <body>
+        <h1>Formulário</h1>
+        <form>
+            Nome:     <input type="text"><br><br>
+            Idade:    <input type="text"><br><br>
+            Escola:   <input type="text"><br><br>
+            Cidade:   <input type="text"><br><br>
+            Telefone: <input type="text"><br><br>
+            <input type="submit">
+        </form>
+    </body>
