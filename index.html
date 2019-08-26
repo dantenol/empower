@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <title>Formulário</title>
+</head>
+<body id="container">
+    <div id="header">
+        <h1>Inscrição</h1>
+        <h2>Parabéns, você escolheu seu desafio, agora precisamos de alguns dados para prosseguir</h2>
+    </div>
+    <form>
+    <div class="group"">
+        <div id="divE">
+            <p>Nome completo:</p>
+            <input type="text" name="nome" class="textbox">
+            <p>Nome da escola:</p>
+            <input type="text" name="escola" class="textbox">
+            <p>Seu email:</p>
+            <input type="email" name="email" class="textbox">
+        </div>
+        <div id="divD">
+            <p>Sua idade:</p>
+            <input type="text" name="idade" class="textbox">
+            <p>Nome da cidade:</p>
+            <input type="text" name="cidade" class="textbox">
+            <p>Número de telefone:</p>
+            <input type="tel" name="telefone" pattern="[0-9]{11}" required class="textbox">
+        </div>
+        </div>
+        <input type="submit" name="enviar" class="botao">
+    </form>
+</body>
+</html>
