@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #background{ /*  Cor de background*/
     background: #5200b1;
 }
@@ -71,4 +72,64 @@ textarea:focus, input:focus, select:focus{ /* Tirar borda azul */
     width: 80%;
     border-radius: 10px;
     box-shadow: 4px 4px 3px #220051;
+=======
+#oi{
+    background: #5200b1
+}
+.ola{
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+}
+.divTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    background: #111111;
+    width: 80%;
+    border-radius: 10px;
+    height: 35px;
+    box-shadow: 4px 4px 3px #220051;
+}
+.botao{
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #01e5b2;
+    font-size: 20px;
+    background: #111111;
+    width: 80%;
+    border-radius: 10px;
+    height: 35px;
+    box-shadow: 4px 4px 3px #220051;
+}
+.botao:hover{
+    cursor: pointer;
+}
+textarea:focus, input:focus, select:focus{
+    outline: 0;
+}
+.texto{
+    color: white;
+    font-size: 15px;
+}
+.textbox{
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    background: #111111;
+    width: 80%;
+    border-radius: 10px;
+    height: 25px;
+    box-shadow: 4px 4px 3px #220051;
+}
+.midia{
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px #220051;
+>>>>>>> 6e109c5fb018d90f6c285810422e3f58246a4797
 }
