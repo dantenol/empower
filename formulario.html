@@ -8,26 +8,25 @@
 </head>
 <body id="container">
     <div id="header">
-        <h1>Nome do desafio</h1>
-        <h2>Parabéns, você escolheu seu desafio, agora precisamos de alguns dados para 
-            prosseguir</h2>
+        <div class="divTitulo">
+            <h1>Nome do Desafio</h1>
+        </div>
     </div>
     <form>
         <div id="div">
-            <div>
-                <p>Nome completo:</p>
+            
+                <p class="texto">Nome completo:</p>
                 <input type="text" name="nome" class="textbox">
-                <p>Nome da escola:</p>
+                <p class="texto">Nome da escola:</p>
                 <input type="text" name="escola" class="textbox">
-                <p>Sua idade:</p>
+                <p class="texto">Sua idade:</p>
                 <input type="text" name="idade" class="textbox">
-                <p>Nome da cidade:</p>
+                <p class="texto">Nome da cidade:</p>
                 <input type="text" name="cidade" class="textbox">
-                <p>Número de telefone:</p>
+                <p class="texto">Número de telefone:</p>
                 <input type="tel" name="telefone" pattern="[0-9]{11}" required class="textbox"> 
-                </div>
-            </div>
         <input type="submit" value="Enviar" name="enviar" class="botao">
+        </div>
     </form>
 </body>
 </html>
