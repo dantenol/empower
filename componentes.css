@@ -6,11 +6,8 @@
     flex-flow: wrap column;
     align-items: center;
 }
-.divTitulo{ /* Div para titulos */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+/* Elementos gerais */
+input[type=button], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo{
     font-size: 15px;
     font-family: sans-serif;
     background: #111111;
@@ -19,19 +16,18 @@
     height: 35px;
     box-shadow: 4px 4px 3px #220051;
 }
-.botao{ /* Botões */
+.divTitulo{ /* Div para titulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+input[type=button], input[type=submit], input[type=reset]{ /* Botões */
     border: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #01e5b2;
-    font-size: 20px;
-    font-family: sans-serif;
-    background: #111111;
-    width: 80%;
-    border-radius: 10px;
-    height: 35px;
-    box-shadow: 4px 4px 3px #220051;
 }
 .botao:hover{ /* Hover do botão */
     cursor: pointer;
@@ -44,17 +40,10 @@ textarea:focus, input:focus, select:focus{ /* Tirar borda azul */
     font-size: 15px;
     font-family: sans-serif;
 }
-.textbox{ /* Caixa de texto*/
+input[type=text]{ /* Caixa de texto*/
     border: 1px solid white;
     text-align: center;
     color: white;
-    font-size: 15px;
-    font-family: sans-serif;
-    background: #111111;
-    width: 80%;
-    border-radius: 10px;
-    height: 25px;
-    box-shadow: 4px 4px 3px #220051;
 }
 .midia{ /* Imagens e Videos*/
     width: 80%;
@@ -64,11 +53,6 @@ textarea:focus, input:focus, select:focus{ /* Tirar borda azul */
 .divLongo{
     overflow: scroll;
     height: 200px;
-    color: white;
     font-size: 12px;
-    font-family: sans-serif;
-    background: #111111;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 4px 4px 3px #220051;
+    color: white
 }
