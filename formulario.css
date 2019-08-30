@@ -50,7 +50,7 @@ textarea:focus, input:focus, select:focus{
     color: white;
     font-size: 15px;
     align-self: flex-start;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 .divTitulo{
     display: flex;
