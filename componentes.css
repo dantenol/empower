@@ -7,7 +7,7 @@
     align-items: center;
 }
 /* Elementos gerais */
-input[type=button], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo{
+button, input[type=button], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo{
     font-size: 15px;
     font-family: sans-serif;
     background: #111111;
@@ -22,7 +22,7 @@ input[type=button], input[type=submit], input[type=reset], .divLongo, input[type
     align-items: center;
     color: white;
 }
-input[type=button], input[type=submit], input[type=reset]{ /* Botões */
+button, input[type=button], input[type=submit], input[type=reset]{ /* Botões */
     border: 0px;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ input[type=button], input[type=submit], input[type=reset]{ /* Botões */
 .botao:hover{ /* Hover do botão */
     cursor: pointer;
 }
-textarea:focus, input:focus, select:focus{ /* Tirar borda azul */
+textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
     outline: 0;
 }
 .texto{ /* Textos em geral */
