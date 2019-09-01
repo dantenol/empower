@@ -7,6 +7,10 @@
     font-size: 25px;
     font-family: sans-serif;   
 }
+.voltar{
+    position: absolute;
+    left: 5px;
+}
 .centrealizar{ /* Div para centrealizar e colocar em coluna */
     display: flex;
     flex-flow: wrap column;
