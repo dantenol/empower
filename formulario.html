@@ -6,27 +6,30 @@
     <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
     <title>Formulário</title>
 </head>
-<body id="container">
-    <div id="header">
+<body style="background: #5200b1">
+        <div class="header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
+            <i style="color:#01e5b2">EM</i>
+            <i style="color:white">POWER</i>
+</div>
+    <div class="centrealizar">
         <div class="divTitulo">
             <h1>Nome do Desafio</h1>
         </div>
+            <p class="texto">Nome completo:</p>
+            <input type="text" name="nome" class="textbox">
+            <p class="texto">Nome da escola:</p>
+            <input type="text" name="escola" class="textbox">
+            <p class="texto">Sua idade:</p>
+            <input type="text" name="idade" class="textbox">
+            <p class="texto">Nome da cidade:</p>
+            <input type="text" name="cidade" class="textbox">
+            <p class="texto">Número de telefone:</p>
+            <input type="tel" name="telefone" pattern="[0-9]{11}" required class="textbox"> 
+            <br><br><br>
+            <input type="submit" value="Quero participar do desafio!" name="enviar" class="botao">
     </div>
-    <form>
-        <div id="div">
-            
-                <p class="texto">Nome completo:</p>
-                <input type="text" name="nome" class="textbox">
-                <p class="texto">Nome da escola:</p>
-                <input type="text" name="escola" class="textbox">
-                <p class="texto">Sua idade:</p>
-                <input type="text" name="idade" class="textbox">
-                <p class="texto">Nome da cidade:</p>
-                <input type="text" name="cidade" class="textbox">
-                <p class="texto">Número de telefone:</p>
-                <input type="tel" name="telefone" pattern="[0-9]{11}" required class="textbox"> 
-        <input type="submit" value="Enviar" name="enviar" class="botao">
-        </div>
-    </form>
 </body>
 </html>
