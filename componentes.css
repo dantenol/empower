@@ -13,11 +13,16 @@
 .header{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 25px;
     margin-bottom: 25px;
     height: 50px;
     font-size: 25px;
     font-family: sans-serif;   
+}
+.voltar{
+    position: absolute;
+    left: 5px;
 }
 .centrealizar{ /* Div para centrealizar e colocar em coluna */
     display: flex;
