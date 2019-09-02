@@ -30,7 +30,7 @@
     align-items: center;
 }
 /* Elementos gerais */
-button, input[type=button], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo{
+button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo{
     font-size: 15px;
     font-family: sans-serif;
     background: #111111;
@@ -63,7 +63,7 @@ textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
     font-size: 15px;
     font-family: sans-serif;
 }
-input[type=text]{ /* Caixa de texto*/
+input[type=text], input[type=tel]{ /* Caixa de texto*/
     border: 1px solid white;
     text-align: center;
     color: white;
@@ -81,4 +81,8 @@ input[type=text]{ /* Caixa de texto*/
     padding-left: 2%;
     padding-right: 2%;
 
+}
+p{
+    align-self: flex-start;
+    margin-left: 10%;
 }
