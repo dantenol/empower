@@ -62,6 +62,8 @@ textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
     color: white;
     text-align: justify;
     font-size: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
     font-family: sans-serif;
 }
 input[type=text]{ /* Caixa de texto*/
@@ -79,6 +81,4 @@ input[type=text]{ /* Caixa de texto*/
     height: 200px;
     font-size: 12px;
     color: white;
-    padding-left: 2%;
-    padding-right: 2%;
 }
