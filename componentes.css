@@ -81,7 +81,6 @@ input[type=text], input[type=tel]{ /* Caixa de texto*/
     height: 200px;
     font-size: 12px;
     color: white;
-<<<<<<< HEAD
     padding-left: 2%;
     padding-right: 2%;
 
@@ -90,6 +89,3 @@ p{
     align-self: flex-start;
     margin-left: 10%;
 }
-=======
-}
->>>>>>> 6e338ec994ab6e49e013a6aff47def60a3ada94f
