@@ -1,0 +1,85 @@
+#background{ /*  Cor de background*/
+    background: #5200b1;
+}
+/*HTML Header
+<div class="header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
+            <i style="color:#01e5b2">EM</i>
+            <i style="color:white">POWER</i>
+</div>
+*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap row;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 50px;
+    font-size: 25px;
+    font-family: sans-serif;   
+}
+.voltar{
+    position: absolute;
+    left: 5px;
+}
+.centrealizar{ /* Div para centrealizar e colocar em coluna */
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+}
+/* Elementos gerais */
+button, .divLongo, input[type=button], input[type=submit], input[type=reset], input[type=text], input[type=tel]{
+    font-size: 15px;
+    font-family: sans-serif;
+    background: #111111;
+    width: 80%;
+    border-radius: 10px;
+    height: 35px;
+    box-shadow: 4px 4px 3px #220051;
+}
+.divTitulo{ /* Div para titulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+button, input[type=button], input[type=submit], input[type=reset]{ /* Botões */
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #01e5b2;
+}
+.botao:hover{ /* Hover do botão (INUTILIZADO?, uma vez que a plataforma alvo é o Mobile)*/
+    cursor: pointer;
+}
+textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
+    outline: 0;
+}
+.texto{ /* Textos em geral */
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: sans-serif;
+}
+input[type=text], input[type=tel]{ /* Caixa de texto*/
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+}
+.midia{ /* Imagens e Videos*/
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px #220051;
+}
+.divLongo{
+    overflow-y: auto;
+    height: 200px;
+    font-size: 12px;
+    color: white;
+}
