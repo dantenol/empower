@@ -44,7 +44,6 @@ button, input[type=button], input[type=tel], input[type=submit], input[type=rese
     justify-content: center;
     align-items: center;
     color: white;
-    margin-left: 10%;
 }
 button, input[type=button], input[type=submit], input[type=reset]{ /* Botões */
     border: 0px;
