@@ -44,6 +44,7 @@ button, input[type=button], input[type=tel], input[type=submit], input[type=rese
     justify-content: center;
     align-items: center;
     color: white;
+    margin-left: 10%;
 }
 button, input[type=button], input[type=submit], input[type=reset]{ /* Botões */
     border: 0px;
@@ -65,6 +66,8 @@ textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
     padding-left: 2%;
     padding-right: 2%;
     font-family: sans-serif;
+    align-self: flex-start;
+    margin-left: 10%;
 }
 input[type=text], input[type=tel]{ /* Caixa de texto*/
     border: 1px solid white;
@@ -84,8 +87,4 @@ input[type=text], input[type=tel]{ /* Caixa de texto*/
     padding-left: 2%;
     padding-right: 2%;
 
-}
-p{
-    align-self: flex-start;
-    margin-left: 10%;
 }
