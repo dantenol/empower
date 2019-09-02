@@ -60,8 +60,6 @@ textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
 }
 .texto{ /* Textos em geral */
     color: white;
-    padding-left: 2%;
-    padding-right: 2%;
     text-align: justify;
     font-size: 15px;
     font-family: sans-serif;
