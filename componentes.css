@@ -1,16 +1,24 @@
-#background{ /*  Cor de background*/
+.fundoRoxo{ /*  Cor de background*/
     background: #5200b1;
 }
-/*HTML Header
-<div class="header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
-            <i style="color:#01e5b2">EM</i>
-            <i style="color:white">POWER</i>
-</div>
+/* Titulo da pagina */
+#tituloEN{
+    color: #01e5b2;
+}
+#tituloPOWER{
+    color: white;
+}
+/*HTML Header (NOVO)
+<header class="cabecalho">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" class="voltar">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
+    <i id="tituloEN">EM</i>
+    <i id="tituloPOWER">POWER</i>
+</header>
 */
-.header{
+
+.cabecalho{ /* Estilo do elemento header*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +28,7 @@
     font-size: 25px;
     font-family: sans-serif;   
 }
-.voltar{
+.voltar{ /* Botao de voltar */
     position: absolute;
     left: 5px;
 }
@@ -62,11 +70,12 @@ textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
     color: white;
     text-align: justify;
     font-size: 15px;
-    padding-left: 2%;
-    padding-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     font-family: sans-serif;
 }
 input[type=text], input[type=tel]{ /* Caixa de texto*/
+    overflow-y: scroll;
     border: 1px solid white;
     text-align: center;
     color: white;
@@ -81,11 +90,12 @@ input[type=text], input[type=tel]{ /* Caixa de texto*/
     height: 200px;
     font-size: 12px;
     color: white;
-    padding-left: 2%;
-    padding-right: 2%;
-
+    /*CAIXA DESALINHADA:*/
+    /*padding-left: 2%;
+    padding-right: 2%;*/
 }
 p{
     align-self: flex-start;
-    margin-left: 10%;
+    /*TEXTO DESCENTRALIZADO*/
+    /*margin-left: 10%;*/
 }
