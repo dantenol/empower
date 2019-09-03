@@ -36,9 +36,10 @@
     display: flex;
     flex-flow: wrap column;
     align-items: center;
+    width: 100%;
 }
 /* Elementos gerais */
-button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo{
+button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo, textarea{
     font-size: 15px;
     font-family: sans-serif;
     background: #111111;
@@ -46,6 +47,7 @@ button, input[type=button], input[type=tel], input[type=submit], input[type=rese
     border-radius: 10px;
     height: 35px;
     box-shadow: 4px 4px 3px #220051;
+    color: white;
 }
 .divTitulo{ /* Div para titulos */
     display: flex;
@@ -98,4 +100,10 @@ p{
     align-self: flex-start;
     /*TEXTO DESCENTRALIZADO*/
     /*margin-left: 10%;*/
+}
+
+/*================== APPEND ==================*/
+
+textarea{
+    height: 200px;
 }
