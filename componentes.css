@@ -1,4 +1,4 @@
-.fundoRoxo{ /*  Cor de background*/
+body{ /*  Cor de background*/
     background: #5200b1;
 }
 /* Titulo da pagina */
@@ -39,7 +39,7 @@
     width: 100%;
 }
 /* Elementos gerais */
-button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text], .divTitulo, textarea{
+button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text],input[type=number], .divTitulo, textarea{
     font-size: 15px;
     font-family: sans-serif;
     background: #111111;
@@ -76,11 +76,11 @@ textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
     margin-right: 5%;
     font-family: sans-serif;
 }
-input[type=text], input[type=tel]{ /* Caixa de texto*/
+input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
     overflow-y: scroll;
     border: 1px solid white;
-    text-align: center;
     color: white;
+    padding-inline-start: 2px;
 }
 .midia{ /* Imagens e Videos*/
     width: 80%;
@@ -96,10 +96,8 @@ input[type=text], input[type=tel]{ /* Caixa de texto*/
     /*padding-left: 2%;
     padding-right: 2%;*/
 }
-p{
+p, label{
     align-self: flex-start;
-    /*TEXTO DESCENTRALIZADO*/
-    /*margin-left: 10%;*/
 }
 
 textarea{
