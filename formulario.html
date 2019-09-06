@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" type="text/css" href="componentes.css" media="screen">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="componentes.css" media="screen">
-    <title>Formulário</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inscrição</title>
 </head>
-<body style="background: #5200b1">
-        <div class="header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" class="voltar">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
-            <i style="color:#01e5b2">EM</i>
-            <i style="color:white">POWER</i>
-</div>
-    <div class="centrealizar">
+<body>
+        <header class="cabecalho">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" class="voltar">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
+            <i id="tituloEN">EM</i>
+            <i id="tituloPOWER">POWER</i>
+        </header>
+        <div class="centrealizar">
         <div class="divTitulo">
             <h1>Nome do Desafio</h1>
         </div>
-        <br><br>
-        <form 
-            action="https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse"
-            target="_blank"
-            method="POST">
-            <p class="texto">Nome completo:</p>
-            <input type="text" id="nome" name="entry.1530501406" class="textbox">
-            <p class="texto">Nome da escola:</p>
-            <input type="text" id="escola" name="entry.2061797496" class="textbox">
-            <p class="texto">Sua idade:</p>
-            <input type="text" id="idade" name="entry.83259554" class="textbox">
-            <p class="texto">Nome da cidade:</p>
-            <input type="text" id="cidade" name="entry.606213823" class="textbox">
-            <p class="texto">Número de telefone:</p>
-            <input type="tel" id="telefone" name="entry.799252884" pattern="[0-9]{11}" required class="textbox"> 
+        <form class="centrealizar" id="myForm" onsubmit="javascript:enviar()">
+            <br><br>
+            <p class="texto">Nome Completo:</p>
+            <input id="nome" name="entry.1530501406" type="text">
+            <p class="texto">Nome da Escola</p>
+            <input id="escola" name="entry.2061797496" type="text">
+            <p class="texto">Idade:</p>
+            <input type="number" id="idade" name="entry.83259554">
+            <p class="texto">Cidade:</p>
+            <input type="text" id="cidade" name="entry.606213823">
+            <p class="texto">Número de Telefone:</p>
+            <input type="tel" id="telefone" name="entry.799252884">
             <br><br><br>
-            <input type="submit" value="Quero participar do desafio!" name="enviar" class="botao">
+            <input type="submit">
         </form>
-    </div>
+        </div>
 </body>
+<script>
+    async function enviar(){
+        const url = "https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse"
+        const myForm = document.getElementById("myForm");
+        const formData = new FormData(myForm);
+        fetch(url, {method: "POST", body: formData})        
+    }
+</script>
 </html>
