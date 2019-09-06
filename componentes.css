@@ -80,7 +80,7 @@ input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
     overflow-y: scroll;
     border: 1px solid white;
     color: white;
-    padding-inline-start: 2px;
+    padding-inline-start: 4px;
 }
 .midia{ /* Imagens e Videos*/
     width: 80%;
