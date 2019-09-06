@@ -41,7 +41,10 @@
         const url = "https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse"
         const myForm = document.getElementById("myForm");
         const formData = new FormData(myForm);
-        fetch(url, {method: "POST", body: formData})        
+        fetch(url, {method: "POST", body: formData})
+        .catch(function (error){
+            console.log(error);
+        })        
     }
 </script>
 </html>
