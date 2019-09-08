@@ -17,10 +17,12 @@
         </header>
         <div class="centrealizar">
         <div class="divTitulo">
-            <h1>Nome do Desafio</h1>
+            <h1 id="tituloDesafio"></h1>
         </div>
         <form class="centrealizar" id="myForm" onsubmit="javascript:enviar()">
             <br><br>
+            <p class="texto">Desafio</p>
+            <input type="text" name="entry.1075876958" id="desafio" readonly="true" value="Viagem para Disney">
             <p class="texto">Nome Completo:</p>
             <input id="nome" name="entry.1530501406" type="text">
             <p class="texto">Nome da Escola</p>
@@ -37,13 +39,15 @@
         </div>
 </body>
 <script>
+    window.onload = function(){
+        document.getElementById("tituloDesafio").innerHTML = document.getElementById("desafio").value
+    }
     async function enviar(){
         event.preventDefault();
         const url = "https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse"
         const myForm = document.getElementById("myForm");
         const formData = new FormData(myForm);
         fetch(url, {method: "POST", body: formData, mode: "no-cors"})
-        .then(console.log(myForm))
         .catch(function (error){
             console.log(error);
         })
