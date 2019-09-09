@@ -2,9 +2,14 @@ body{ /*  Cor de background*/
     background: #5200b1;
     margin-bottom: 50px;
 }
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+* {
+    font-family: 'Exo', sans-serif;
+}
 /* Titulo da pagina */
 #tituloEN{
     color: #01e5b2;
+    font-weight: bold;
 }
 #tituloPOWER{
     color: white;
@@ -27,7 +32,7 @@ body{ /*  Cor de background*/
     margin-bottom: 25px;
     height: 50px;
     font-size: 25px;
-    font-family: sans-serif;   
+    /*font-family: sans-serif;*/
 }
 .voltar{ /* Botao de voltar */
     position: absolute;
@@ -42,7 +47,7 @@ body{ /*  Cor de background*/
 /* Elementos gerais */
 button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text],input[type=number], .divTitulo, textarea{
     font-size: 15px;
-    font-family: sans-serif;
+    /*font-family: sans-serif;*/
     background: #111111;
     width: 80%;
     border-radius: 10px;
@@ -75,7 +80,7 @@ textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
     font-size: 15px;
     margin-left: 5%;
     margin-right: 5%;
-    font-family: sans-serif;
+    /*font-family: sans-serif;*/
 }
 input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
     overflow-y: scroll;
@@ -83,10 +88,19 @@ input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
     color: white;
     padding-inline-start: 4px;
 }
-.midia{ /* Imagens e Videos*/
+.midia{ /* Imagens e Videos */
     width: 80%;
-    border-radius: 10px;
+    position: relative;
+    /*padding-top: 56.25%;*/
+    padding-top: 60%;
     box-shadow: 4px 4px 3px #220051;
+}
+iframe {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 100%;
+    height: 100%;
 }
 .divLongo{
     overflow-y: auto;
