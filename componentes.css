@@ -1,0 +1,120 @@
+body{ /*  Cor de background*/
+    background: #5200b1;
+    margin-bottom: 50px;
+}
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+* {
+    font-family: 'Exo', sans-serif;
+}
+/* Titulo da pagina */
+#tituloEN{
+    color: #01e5b2;
+    font-weight: bold;
+}
+#tituloPOWER{
+    color: white;
+}
+/*HTML Header (NOVO)
+<header class="cabecalho">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" class="voltar">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
+    <i id="tituloEN">EM</i>
+    <i id="tituloPOWER">POWER</i>
+</header>
+*/
+
+.cabecalho{ /* Estilo do elemento header*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 50px;
+    font-size: 25px;
+    /*font-family: sans-serif;*/
+}
+.voltar{ /* Botao de voltar */
+    position: absolute;
+    left: 5px;
+}
+.centrealizar{ /* Div para centrealizar e colocar em coluna */
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    width: 100%;
+}
+/* Elementos gerais */
+button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text],input[type=number], .divTitulo, textarea{
+    font-size: 15px;
+    /*font-family: sans-serif;*/
+    background: #111111;
+    width: 80%;
+    border-radius: 10px;
+    height: 35px;
+    box-shadow: 4px 4px 3px #220051;
+    color: white;
+}
+.divTitulo{ /* Div para titulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+button, input[type=button], input[type=submit], input[type=reset]{ /* Botões */
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #01e5b2;
+}
+.botao:hover{ /* Hover do botão */
+    cursor: pointer;
+}
+textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
+    outline: 0;
+}
+.texto{ /* Textos em geral */
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /*font-family: sans-serif;*/
+}
+input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
+    overflow-y: scroll;
+    border: 1px solid white;
+    color: white;
+    padding-inline-start: 4px;
+}
+.midia{ /* Imagens e Videos */
+    width: 80%;
+    position: relative;
+    /*padding-top: 56.25%;*/
+    padding-top: 60%;
+    box-shadow: 4px 4px 3px #220051;
+}
+iframe {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 100%;
+    height: 100%;
+}
+.divLongo{
+    overflow-y: auto;
+    height: 200px;
+    font-size: 12px;
+    color: white;
+    /*CAIXA DESALINHADA:*/
+    /*padding-left: 2%;
+    padding-right: 2%;*/
+}
+p, label{
+    align-self: flex-start;
+}
+
+textarea{
+    height: 200px;
+}

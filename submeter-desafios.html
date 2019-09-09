@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="componentes.css" media="screen">
+		<title>Enviar desafio</title>
+	</head>
+	<body class="fundoRoxo">
+		<header class="cabecalho">
+			<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" class="voltar">
+			<path d="M0 0h24v24H0z" fill="none"/>
+			<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white"/></svg>
+			<i id="tituloEN">EM</i>
+			<i id="tituloPOWER">POWER</i>
+		</header>
+		<div class="centrealizar">
+			<div class="divTitulo">
+				<h1>Enviar desafio</h1>
+			</div>
+			<br><br>
+			<p class="texto">Escreva aqui uma descrição do desafio realizado:</p>
+			<textarea class="textbox"></textarea>
+			<br>
+			<p class="texto">Poste uma imagem sobre o desafio:</p>
+			<input type="file" name="pic" accept=".png,.jpg,.docx,.pdf">
+			<br>
+			<p class="texto">Poste um vídeo sobre o desafio:</p>
+			<input type="file" name="pic" accept=".mp4">
+			<p class="texto">Cole aqui um link para um vídeo/foto do desafio:</p>
+			<input type="tel" name="telefone" pattern="(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" required class="textbox"> 
+			<br><br>
+			<input type="submit" value="Finalizar desafio!" name="enviar" class="botao">
+		</div>
+	</body>
+</html>
