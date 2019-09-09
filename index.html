@@ -39,7 +39,7 @@
 				</p>
 			</div>
 			<br>
-			<button class="botao" onclick="javascript:escolherDesafio()">Vamos começar!</button>
+			<button class="botao" onclick="javascript:escolherDesafio('Desafio Disney!')">Vamos começar!</button>
 		</div>
 		<br>
 		<br>
@@ -62,13 +62,13 @@
 				</p>
 			</div>
 			<br>
-			<button class="botao" onclick="javafunction:escolherDesafio()">Vamos começar!</button>
+			<button class="botao" onclick="javafunction:escolherDesafio('Ajudar o ambiente!')">Vamos começar!</button>
 		</div>
 	</body>
 	<script>
-		function escolherDesafio(){
-
-			window.open("formulario.html","_self")
+		function escolherDesafio(desafio){
+			const url = "formulario.html" + "?" + desafio;
+			window.open(url,"_self");
 		}
 	</script>
 	<script>
