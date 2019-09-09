@@ -71,7 +71,7 @@ button, input[type=button], input[type=submit], input[type=reset]{ /* Botões */
 .botao:hover{ /* Hover do botão */
     cursor: pointer;
 }
-textarea:focus, input:focus, select:focus, button{ /* Tirar borda azul */
+textarea:focus, input:focus, select:focus, button, iframe{ /* Tirar borda azul */
     outline: 0;
 }
 .texto{ /* Textos em geral */
@@ -90,14 +90,15 @@ input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
 }
 .midia{ /* Imagens e Videos */
     width: 80%;
+    /*height: 400px;*/
     position: relative;
     /*padding-top: 56.25%;*/
     padding-top: 60%;
     box-shadow: 4px 4px 3px #220051;
 }
-iframe {
+.video {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 1px;
     width: 100%;
     height: 100%;

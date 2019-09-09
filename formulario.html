@@ -22,7 +22,7 @@
         <form class="centrealizar" id="myForm" onsubmit="javascript:enviar()">
             <br><br>
             <p class="texto">Desafio</p>
-            <input type="text" name="entry.1075876958" id="desafio" readonly="true" value="Viagem para Disney">
+            <input type="text" name="entry.1075876958" id="desafio" readonly="true">
             <p class="texto">Nome Completo:</p>
             <input id="nome" name="entry.1530501406" type="text">
             <p class="texto">Nome da Escola</p>
@@ -40,7 +40,11 @@
 </body>
 <script>
     window.onload = function(){
-        document.getElementById("tituloDesafio").innerHTML = document.getElementById("desafio").value
+        var nome = document.location.search // Pega o valor de search da url
+        nome = nome.replace("?desafio=","") // Retira o "?desafio=" do valor de search
+        const desafio = decodeURIComponent(nome); // Decodifica o valor
+        document.getElementById("tituloDesafio").innerHTML = desafio;
+        document.getElementById("desafio").value = desafio;
     }
     async function enviar(){
         event.preventDefault();
@@ -55,7 +59,7 @@
                 
     }
     function voltar(){
-        window.open("desafios.html","_self")
+        window.open("index.html","_self")
     }
 </script>
 </html>
