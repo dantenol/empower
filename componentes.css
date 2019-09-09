@@ -90,6 +90,7 @@ input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
 }
 .midia{ /* Imagens e Videos */
     width: 80%;
+    /*height: 400px;*/
     position: relative;
     /*padding-top: 56.25%;*/
     padding-top: 60%;
@@ -97,7 +98,7 @@ input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
 }
 iframe {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 1px;
     width: 100%;
     height: 100%;
