@@ -75,6 +75,13 @@
           maxlength="15"
           required
         />
+        <p class="texto">E-mail:</p>
+        <input
+          type="email"
+          id="email"
+          name="entry.1992091842"
+          required
+        />
         <br /><br /><br />
         <input type="submit" />
       </form>
@@ -118,28 +125,22 @@
         "https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse";
       const myForm = document.getElementById("myForm");
       myForm.childNodes.forEach(i => {
-        console.log(i.id, i.value);
-        if (i.id === "telefone" && i.length !== 15) {
+        if (i.id === "telefone" && i.value.length !== 15) {
           throw alert("Número de celular inválido");
         } else if (i.id === "email" && !emailRegex.test(i.value)) {
           throw alert("email inválido");
-        } else if (
-          i.id === "nascimento" &&
-          (i.value.length !== 8 || i.value.length !== 10)
-        ) {
-          throw alert("data de nascimento inválida");
         } else if (i.required && !Boolean(i.value)) {
           throw alert("Você precisa preencher todos os campos");
         }
       });
       const formData = new FormData(myForm);
-      // fetch(url, {method: "POST", body: formData, mode: "no-cors"})
-      // .catch(function (error){
-      //     console.log(error);
-      //     alert("Oops, algo deu errado ao submeter o desafio...")
-      //     break
-      // })
-      // window.open("confirmacao.html", "_self")
+      fetch(url, {method: "POST", body: formData, mode: "no-cors"})
+      .catch(function (error){
+          console.log(error);
+          alert("Oops, algo deu errado ao submeter o desafio...")
+          break
+      })
+      window.open("confirmacao.html", "_self")
     }
     function voltar() {
       window.open("index.html", "_self");
