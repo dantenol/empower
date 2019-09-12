@@ -1,4 +1,4 @@
-const cidadesSp = [
+const cidadesSP = [
   "Sao Paulo",
   "Adamantina",
   "Adolfo",
@@ -646,7 +646,7 @@ const cidadesSp = [
   "Zacarias"
 ];
 
-const cidadesMg = [
+const cidadesMG = [
   "Belo Horizonte",
   "Abadia dos Dourados",
   "Abaete",
