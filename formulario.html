@@ -50,6 +50,11 @@
         event.preventDefault();
         const url = "https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse"
         const myForm = document.getElementById("myForm");
+        myForm.childNodes.forEach(i => {
+            if (i.required && !Boolean(i.value)) {
+                throw alert('Você precisa preencher todos os campos')
+            }
+        })
         const formData = new FormData(myForm);
         fetch(url, {method: "POST", body: formData, mode: "no-cors"})
         .catch(function (error){
