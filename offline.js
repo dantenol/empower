@@ -1,9 +1,11 @@
-const cacheName = 'cache-v1';
+'use strict'
+const cacheName = 'cache-v0';
 const precacheResources = [
 	'/',
 	'componentes.css',
 	'desafios.html',
 	'formulario.html',
+	'confirmacao.html',
 	'submeter-desafios.html',
 ];
 
@@ -14,6 +16,7 @@ self.addEventListener(
 		event.waitUntil(
 			caches.open(cacheName)
 			.then(cache => cache.addAll(precacheResources))
+			.catch(err => console.log(err))
 		);
 	}
 );
