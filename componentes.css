@@ -45,7 +45,7 @@ body{ /*  Cor de background*/
     width: 100%;
 }
 /* Elementos gerais */
-button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text],input[type=number], .divTitulo, textarea{
+button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text],input[type=number], .divTitulo, select, textarea{
     font-size: 15px;
     /*font-family: sans-serif;*/
     background: #111111;
