@@ -11,6 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Inscrição</title>
+    <script
+      src="https://unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"
+      data-autoinit="true"
+    ></script>
+    <script src="cidades.js"></script>
   </head>
   <body>
     <header class="cabecalho">
@@ -49,46 +54,95 @@
         <input id="nome" name="entry.1530501406" type="text" required />
         <p class="texto">Nome da Escola</p>
         <input id="escola" name="entry.2061797496" type="text" required />
-        <p class="texto">Idade:</p>
-        <input type="number" id="idade" name="entry.83259554" required />
+        <p class="texto">Data de nascimento:</p>
+        <input type="tel" id="nascimento" name="entry.83259554" required />
+
+        <p class="texto">Estado:</p>
+        <select id="estado" onchange="atualziarCidades()" name="entry.1500141418" required>
+          <option selected disabled></option>
+          <option value="MG">Minas Gerais</option>
+          <option value="SP">São Paulo</option>
+        </select>
         <p class="texto">Cidade:</p>
-        <input type="text" id="cidade" name="entry.606213823" required />
+        <select id="cidade" name="entry.606213823" required>
+          <option></option>
+        </select>
         <p class="texto">Número de Telefone:</p>
-        <input type="tel" id="telefone" name="entry.799252884" required />
+        <input
+          type="tel"
+          id="telefone"
+          name="entry.799252884"
+          maxlength="15"
+          required
+        />
         <br /><br /><br />
         <input type="submit" />
       </form>
     </div>
   </body>
   <script>
-    window.onload = function(){
-        var nome = document.location.search // Pega o valor de search da url
-        nome = nome.replace("?desafio=","") // Retira o "?desafio=" do valor de search
-        const desafio = decodeURIComponent(nome); // Decodifica o valor
-        document.getElementById("tituloDesafio").innerHTML = desafio;
-        document.getElementById("desafio").value = desafio;
-    }
-    async function enviar(){
-        event.preventDefault();
-        const url = "https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse"
-        const myForm = document.getElementById("myForm");
-        myForm.childNodes.forEach(i => {
-            if (i.required && !Boolean(i.value)) {
-                throw alert('Você precisa preencher todos os campos')
-            }
-        })
-        const formData = new FormData(myForm);
-        fetch(url, {method: "POST", body: formData, mode: "no-cors"})
-        .catch(function (error){
-            console.log(error);
-            alert("Oops, algo deu errado ao submeter o desafio...")
-            break
-        })
-        window.open("confirmacao.html", "_self")
+    window.onload = function() {
+      var nome = document.location.search; // Pega o valor de search da url
+      nome = nome.replace("?desafio=", ""); // Retira o "?desafio=" do valor de search
+      const desafio = decodeURIComponent(nome); // Decodifica o valor
+      document.getElementById("tituloDesafio").innerHTML = desafio;
+      document.getElementById("desafio").value = desafio;
+      VMasker(document.getElementById("telefone")).maskPattern(
+        "(99) 99999-9999"
+      );
+      VMasker(document.getElementById("nascimento")).maskPattern("99/99/9999");
+    };
 
+    function atualziarCidades() {
+      let cidades;
+      const estado = document.getElementById("estado");
+      const elCidade = document.getElementById("cidade");
+      if (estado.value === "MG") {
+        cidades = cidadesMG;
+      } else {
+        cidades = cidadesSP;
+      }
+      elCidade.innerHTML = "";
+      cidades.forEach(c => {
+        var option = document.createElement("option");
+        option.text = c;
+        option.value = c;
+        elCidade.add(option);
+      });
     }
-    function voltar(){
-        window.open("index.html","_self")
+
+    async function enviar() {
+      const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      event.preventDefault();
+      const url =
+        "https://docs.google.com/forms/d/e/1FAIpQLSd_6dwknGdOU496pBnpstNvZOjK-WvJJb3vPcxRNzGDudnl7Q/formResponse";
+      const myForm = document.getElementById("myForm");
+      myForm.childNodes.forEach(i => {
+        console.log(i.id, i.value);
+        if (i.id === "telefone" && i.length !== 15) {
+          throw alert("Número de celular inválido");
+        } else if (i.id === "email" && !emailRegex.test(i.value)) {
+          throw alert("email inválido");
+        } else if (
+          i.id === "nascimento" &&
+          (i.value.length !== 8 || i.value.length !== 10)
+        ) {
+          throw alert("data de nascimento inválida");
+        } else if (i.required && !Boolean(i.value)) {
+          throw alert("Você precisa preencher todos os campos");
+        }
+      });
+      const formData = new FormData(myForm);
+      // fetch(url, {method: "POST", body: formData, mode: "no-cors"})
+      // .catch(function (error){
+      //     console.log(error);
+      //     alert("Oops, algo deu errado ao submeter o desafio...")
+      //     break
+      // })
+      // window.open("confirmacao.html", "_self")
+    }
+    function voltar() {
+      window.open("index.html", "_self");
     }
   </script>
 </html>
