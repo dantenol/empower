@@ -1,18 +1,19 @@
-body{ /*  Cor de background*/
-    background: #5200b1;
-    margin-bottom: 50px;
+body {
+  /*  Cor de background*/
+  background: #5200b1;
+  margin-bottom: 50px;
 }
-@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Exo&display=swap");
 * {
-    font-family: 'Exo', sans-serif;
+  font-family: "Exo", sans-serif;
 }
 /* Titulo da pagina */
-#tituloEN{
-    color: #01e5b2;
-    font-weight: bold;
+#tituloEN {
+  color: #01e5b2;
+  font-weight: bold;
 }
-#tituloPOWER{
-    color: white;
+#tituloPOWER {
+  color: white;
 }
 /*HTML Header (NOVO)
 <header class="cabecalho">
@@ -24,117 +25,144 @@ body{ /*  Cor de background*/
 </header>
 */
 
-.cabecalho{ /* Estilo do elemento header*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    height: 50px;
-    font-size: 25px;
-    /*font-family: sans-serif;*/
+.cabecalho {
+  /* Estilo do elemento header*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 50px;
+  font-size: 25px;
+  /*font-family: sans-serif;*/
 }
-.voltar{ /* Botao de voltar */
-    position: absolute;
-    left: 5px;
+.voltar {
+  /* Botao de voltar */
+  position: absolute;
+  left: 5px;
 }
-.centrealizar{ /* Div para centrealizar e colocar em coluna */
-    display: flex;
-    flex-flow: wrap column;
-    align-items: center;
-    width: 100%;
+.centrealizar {
+  /* Div para centrealizar e colocar em coluna */
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  width: 100%;
 }
 /* Elementos gerais */
-button, input[type=button], input[type=tel], input[type=submit], input[type=reset], .divLongo, input[type=text],input[type=number], .divTitulo, select, textarea{
-    font-size: 15px;
-    /*font-family: sans-serif;*/
-    background: #111111;
-    width: 80%;
-    border-radius: 10px;
-    height: 35px;
-    box-shadow: 4px 4px 3px #220051;
-    color: white;
+button,
+input,
+.divLongo,
+.divTitulo,
+select,
+textarea {
+  font-size: 15px;
+  /*font-family: sans-serif;*/
+  background: #111111;
+  width: 80%;
+  border-radius: 10px;
+  height: 35px;
+  box-shadow: 4px 4px 3px #220051;
+  color: white;
 }
-.divTitulo{ /* Div para titulos */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.divTitulo {
+  /* Div para titulos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-button, input[type=button], input[type=submit], input[type=reset]{ /* Botões */
-    border: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #01e5b2;
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  /* Botões */
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #01e5b2;
 }
-.botao:hover{ /* Hover do botão */
-    cursor: pointer;
+.botao:hover {
+  /* Hover do botão */
+  cursor: pointer;
 }
-textarea:focus, input:focus, select:focus, button, iframe{ /* Tirar borda azul */
-    outline: 0;
+textarea:focus,
+input:focus,
+select:focus,
+button,
+iframe {
+  /* Tirar borda azul */
+  outline: 0;
 }
-.texto{ /* Textos em geral */
-    color: white;
-    text-align: justify;
-    font-size: 15px;
-    margin-left: 5%;
-    margin-right: 5%;
-    /*font-family: sans-serif;*/
+.texto {
+  /* Textos em geral */
+  color: white;
+  text-align: justify;
+  font-size: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /*font-family: sans-serif;*/
 }
-input[type=text], input[type=tel],input[type=number]{ /* Caixa de texto*/
-    overflow-y: scroll;
-    border: 1px solid white;
-    color: white;
-    padding-inline-start: 4px;
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+select {
+  /* Caixa de texto*/
+  overflow-y: scroll;
+  border: 1px solid white;
+  color: white;
+  padding-inline-start: 4px;
 }
-.midia{ /* Imagens e Videos */
-    width: 80%;
-    /*height: 400px;*/
-    position: relative;
-    /*padding-top: 56.25%;*/
-    padding-top: 60%;
-    box-shadow: 4px 4px 3px #220051;
+.midia {
+  /* Imagens e Videos */
+  width: 80%;
+  /*height: 400px;*/
+  position: relative;
+  /*padding-top: 56.25%;*/
+  padding-top: 60%;
+  box-shadow: 4px 4px 3px #220051;
 }
 .video {
-    position: absolute;
-    top: 0px;
-    left: 1px;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  width: 100%;
+  height: 100%;
 }
-.divLongo{
-    overflow-y: auto;
-    height: 200px;
-    font-size: 12px;
-    color: white;
-    /*CAIXA DESALINHADA:*/
-    /*padding-left: 2%;
+.divLongo {
+  overflow-y: auto;
+  height: 200px;
+  font-size: 12px;
+  color: white;
+  /*CAIXA DESALINHADA:*/
+  /*padding-left: 2%;
     padding-right: 2%;*/
 }
-p, label{
-    align-self: flex-start;
+p,
+label {
+  align-self: flex-start;
 }
 
-textarea{
-    height: 200px;
+textarea {
+  height: 200px;
 }
-.centrealizarVertical{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+.centrealizarVertical {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-.aviso{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    margin-top: 25%;
-    width: 80%;
-    background: #111111;
-    border-radius: 5px;
-    padding: 15px 0px;
-    box-shadow: 4px 4px 3px #220051;
+.aviso {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 25%;
+  width: 80%;
+  background: #111111;
+  border-radius: 5px;
+  padding: 15px 0px;
+  box-shadow: 4px 4px 3px #220051;
 }
-.semSombra{
-    box-shadow: none
+.semSombra {
+  box-shadow: none;
 }
